@@ -1,0 +1,118 @@
+/* Experience Section */
+.experience-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  background-color: #0f1624; /* Same background color as About section */
+  color: #cdd2f1; /* Text color */
+}
+
+/* Sidebar (Tabs) */
+.tabs {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.tab {
+  padding: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-left 0.3s ease;
+  margin-bottom: 10px;
+  color: #8892b0; /* Lighter text color for inactive tabs */
+}
+
+.tab:hover, .tab.active {
+  color: #60d394; /* Highlight color same as About section */
+  border-left: 2px solid #60d394; /* Green border for active tabs */
+}
+
+/* Job Details Section */
+.job-details {
+  flex-basis: 70%;
+  background-color: #112240; /* Dark navy background */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  color: #cdd2f1; /* Text color */
+}
+
+.job-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(100px);
+}
+
+.job-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.job-content h3 {
+  color: #60d394; /* Same green highlight color for headings */
+  font-size: 1.8rem;
+}
+
+.job-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.job-content ul li {
+  padding: 5px 0;
+  color: #a8b2d1; /* Lighter color for job description */
+  position: relative;
+}
+
+.job-content ul li::before {
+  content: '\25B8'; /* Triangle bullet point */
+  color: #60d394; /* Green color for bullet point */
+  padding-right: 10px;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-container {
+      flex-direction: column;
+      margin: 0 20px;
+  }
+
+  .tabs {
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+  }
+
+  .job-details {
+      flex-basis: 100%;
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+      margin: 0 auto;
+  }
+
+  .job-content h3 {
+      font-size: 1.5rem;
+  }
+
+  .job-details {
+      padding: 15px;
+  }
+
+  .job-content ul li {
+      font-size: 1rem;
+  }
+}

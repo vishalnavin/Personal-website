@@ -1,0 +1,108 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr; /* Adjust grid for slightly larger text and smaller image section */
+  align-items: center;
+  padding: 0px 0;
+  background-color: #0f1624;
+  color: #cdd2f1;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section dynamically based on screen size */
+  padding-left: 40px; /* Add slight padding for left alignment */
+  padding-right: 40px; /* Add padding to prevent text from touching the edges */
+    padding-bottom: 0; /* Remove extra padding */
+  margin-bottom: -100px; /* Negative margin to bring About closer */
+}
+
+.about-text {
+  text-align: left;
+  padding-right: 20px; /* Reduced space between text and image */
+}
+
+.about-container h2 {
+  font-size: 3rem;
+  color: #60d394;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.about-container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  padding: 0;
+  justify-content: start;
+}
+
+.about-container ul li::before {
+  content: '\25B8';
+  color: #60d394;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+.about-container ul li {
+  font-size: 1.2rem;
+  color: #cdd2f1;
+}
+
+.about-image {
+  display: flex;
+  justify-content: flex-start; /* Align image closer to text */
+  align-items: center;
+}
+
+.about-image img {
+  width: 400px; /* Increased image size */
+  height: auto;
+  border-radius: 10px;
+  margin-left: 10px; /* Reduced space between text and image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr; /* Switch to single-column layout for tablet */
+    margin: 0 20px; /* Smaller margins on tablets */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-text {
+    padding-right: 0; /* Remove padding for small screens */
+  }
+
+  .about-container ul {
+    grid-template-columns: 1fr; /* Single column list items */
+  }
+
+  .about-image {
+    margin-top: 30px; /* Add space above image in single column layout */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin: 0 auto; /* Center the section on small screens */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-container ul {
+    grid-template-columns: 1fr; /* Single column list items */
+  }
+
+  .about-image img {
+    width: 300px; /* Reduce image size on smaller screens */
+  }
+}

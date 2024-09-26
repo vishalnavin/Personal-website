@@ -1,0 +1,105 @@
+/* Home Section Styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;  /* Reduced height from 100vh */
+  background-color: #0f1624;
+  color: #eeeeee;
+  padding-bottom: 0; /* Remove extra padding */
+  margin-bottom: -200px; /* Negative margin to bring About closer */
+}
+
+/* Typing Effect for "Hi, Vishal here!" */
+.typing-container {
+  font-size: 4rem;  /* Reduced font size */
+  font-weight: 300;
+  text-align: center;
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 3px solid #60d394;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  overflow: hidden;
+  color: #cdd2f1;
+}
+
+.highlight-name {
+  color: #60d394;
+  font-weight: 700; /* Keep the highlight bold */
+}
+
+/* Keyframes for the typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #60d394; }
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #a8b2d1;
+  margin-top: 10px; /* Reduced spacing */
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Paragraph text styling */
+.home-container p {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  max-width: 800px;
+  margin-top: 30px;
+  color: #a8b2d1;
+  text-align: center;
+}
+
+/* Email button styling */
+.email-button {
+  margin-top: 20px; /* Reduced margin */
+}
+
+.email-button .email-link {
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #60d394;
+  border: 2px solid #60d394;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.email-button .email-link:hover {
+  background-color: #60d394;
+  color: white;
+}
+
+/* Ensure proper scaling for smaller screens */
+@media (max-width: 768px) {
+  .typing-container {
+    font-size: 2.5rem; /* Adjusted font size for small screens */
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .home-container p {
+    font-size: 1.2rem;
+  }
+
+  .email-button .email-link {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,136 @@
+/* General body style */
+body {
+  background-color: #0f1624; /* Dark blue background color */
+  color: #cdd2f1; /* Light text color */
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f1624; /* Match background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px; /* Add more padding for better spacing */
+  z-index: 999;
+  height: 60px; /* Set a fixed height for alignment */
+}
+
+/* Left side: Logo and Nav links */
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Shift text to the right */
+}
+
+.logo {
+  font-size: 1.5rem; /* Slightly increase font size */
+  color: #cdd2f1;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-right: 2px; /* Add space between logo and links */
+}
+
+/* Center nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* Add a little more space between links */
+}
+
+.nav-links li a {
+  color: #cdd2f1;
+  text-decoration: none;
+  font-size: 16px; /* Slightly increase size of the text */
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Hover effect on navigation links */
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #60d394;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-links li a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Right side: Social Icons */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjust spacing between icons */
+  margin-right: 150px; /* Move icons more to the left */
+}
+
+.nav-right a {
+  color: #cdd2f1;
+  font-size: 20px; /* Icon size */
+}
+
+.nav-right a:hover {
+  color: #60d394; /* Hover effect on icons */
+  transition: color 0.3s ease-in-out;
+}
+
+.edit-icon {
+  font-size: 18px; /* Smaller edit icon */
+}
+
+/* Section styling */
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #0f1624; /* Same dark blue background */
+  color: #cdd2f1; /* Light text color */
+}
+
+h1, p {
+  color: #cdd2f1; /* Light text color for headers and paragraphs */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    gap: 8px; /* Reduce gap between nav links for mobile */
+  }
+
+  .nav-right a {
+    font-size: 16px; /* Smaller icon size for mobile */
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Adjust logo text size for mobile */
+  }
+}
+/* Initially hidden state for all sections */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Slower transition */
+}
+
+/* Visible state when scrolled into view */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

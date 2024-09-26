@@ -1,0 +1,27 @@
+.projects-container {
+  padding: 100px 0;
+  background-color: #0f1624; /* Match background color with the home section */
+  color: #cdd2f1; /* Match text color */
+  text-align: center;
+}
+
+.projects-container h2 {
+  font-size: 3rem;
+  color: #60d394; /* Highlighted text color */
+}
+
+.project {
+  margin-top: 20px;
+  color: #cdd2f1; /* Ensure project text matches the global color */
+}
+
+.project h3 {
+  font-size: 2rem;
+  color: #60d394; /* Project title in highlighted color */
+}
+
+.project p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #cdd2f1; /* Ensure project description text matches the global color */
+}
